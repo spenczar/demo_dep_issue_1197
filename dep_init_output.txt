@@ -1,0 +1,3 @@
+Getting direct dependencies...
+Checked 1 directories for packages.
+Found 1 direct dependencies.

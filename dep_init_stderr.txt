@@ -1,0 +1,32 @@
+Root project is "github.com/spenczar/demo_dep_issue_1197"
+ 1 transitively valid internal packages
+ 1 external packages imported from 1 projects
+(0)   ✓ select (root)
+(1)	? attempt github.com/Masterminds/glide with 1 pkgs; 75 versions to try
+(1)	    try github.com/Masterminds/glide@v0.12.3
+(1)	✓ select github.com/Masterminds/glide@v0.12.3 w/1 pkgs
+(2)	? attempt github.com/Masterminds/vcs with 1 pkgs; 25 versions to try
+(2)	    try github.com/Masterminds/vcs@v1.12.0
+(2)	✓ select github.com/Masterminds/vcs@v1.12.0 w/1 pkgs
+  ✓ found solution with 2 packages from 2 projects
+
+Solver wall times by segment:
+     b-source-exists: 2.432164396s
+         b-list-pkgs: 244.628058ms
+              b-gmal:  240.23481ms
+             satisfy:   1.125639ms
+         select-atom:    537.449µs
+            new-atom:    133.837µs
+     b-list-versions:      111.5µs
+  b-deduce-proj-root:     77.742µs
+         select-root:     59.931µs
+               other:     12.356µs
+
+  TOTAL: 2.919085718s
+
+  Using ^0.12.3 as constraint for direct dep github.com/Masterminds/glide
+  Locking in v0.12.3 (8460774) for direct dep github.com/Masterminds/glide
+  Locking in v1.12.0 (6f1c6d1) for transitive dep github.com/Masterminds/vcs
+(1/2) Wrote github.com/Masterminds/vcs@v1.12.0
+(2/2) Failed to write github.com/Masterminds/glide@v0.12.3
+safe write of manifest and lock: error while writing out vendor tree: failed to write dep tree: failed to strip vendor from github.com/Masterminds/glide: stat /var/folders/07/3tqty4fn0pqdmk8kyscf2g2m0wg_zb/T/dep643738718/vendor/github.com/Masterminds/glide/testdata/path/x/vendor: no such file or directory
